@@ -1,18 +1,20 @@
+
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
-// This plugin adds each Tailwind color as a global CSS variable, e.g., var(--gray-200).
-function addVariablesForColors({ addBase, theme }: { addBase: (base: any) => void; theme: (path: string) => any }) {
-  const allColors = flattenColorPalette(theme("colors"));
+// Inline type assertion
+function addVariablesForColors({ addBase, theme }: { addBase: (base: Record<string, string>) => void; theme: (path: string) => Record<string, string> }) {
+  const allColors = flattenColorPalette(theme("colors")) as Record<string, string>;
   const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val as string]) // Ensure val is treated as a string
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val as string])
   );
 
   addBase({
-    ":root": newVars,
+    ":root": Object.entries(newVars).map(([key, value]) => `${key}: ${value};`).join(' '),
   });
 }
+
+
 
 const config: Config = {
   content: [

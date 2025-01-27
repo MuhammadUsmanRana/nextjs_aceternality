@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    optimizeCss: false,
+  },
   reactStrictMode: true,
   images: {
-    domains: ['assets.aceternity.com'], // Allow external images from this hostname
+    domains: [''], 
   },
 };
 
