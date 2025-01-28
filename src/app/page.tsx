@@ -25,10 +25,10 @@ export default function Home() {
           Background <br /> lights are cool you know.
         </div>
         <div className="font-extralight text-lg md:text-4xl dark:text-neutral-200 py-4 text-center">
-          And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, soluta.
+          And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, soluta. for new reporsity
         </div>
         <Button>
-          Get started
+          Get started 
         </Button>
       </motion.div>
     </AuroraBackground>
