@@ -27,14 +27,11 @@ export default function Home() {
         <div className="font-extralight text-lg md:text-4xl dark:text-neutral-200 py-4 text-center">
           And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, soluta.
         </div>
-        <Button className="">
+        <Button>
           Get started
         </Button>
       </motion.div>
     </AuroraBackground>
-          {/* <div className="flex justify-center mt-6">
-            <Button>Get Started</Button>
-          </div> */}
     </>
   );
 }

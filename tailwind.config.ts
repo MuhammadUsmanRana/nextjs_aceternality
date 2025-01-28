@@ -3,14 +3,16 @@ import type { Config } from "tailwindcss";
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 // Inline type assertion
-function addVariablesForColors({ addBase, theme }: { addBase: (base: Record<string, string>) => void; theme: (path: string) => Record<string, string> }) {
-  const allColors = flattenColorPalette(theme("colors")) as Record<string, string>;
+import type { PluginAPI } from "tailwindcss/types/config";
+
+function addVariablesForColors({ addBase, theme }: PluginAPI) {
+  const allColors = flattenColorPalette(theme("colors"));
   const newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val as string])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
   addBase({
-    ":root": Object.entries(newVars).map(([key, value]) => `${key}: ${value};`).join(' '),
+    ":root": newVars,
   });
 }
 
@@ -27,14 +29,6 @@ const config: Config = {
     extend: {
       animation: {
         aurora: "aurora 60s linear infinite",
-      },
-      backgroundColor: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
         aurora: {
