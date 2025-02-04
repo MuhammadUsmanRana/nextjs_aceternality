@@ -9,14 +9,14 @@ export const CardData = [
         description: "Experience the ultimate comfort and durability with Bata's latest running shoes. Designed for high performance, these shoes feature advanced cushioning, breathable mesh uppers, and a lightweight design to keep you moving. Whether you're training for a marathon or going for a casual jog, these shoes provide excellent grip and support for every stride.",
         image: IMAGES.CARD8_SHOW_IMAGE,
         isNewItem: true,
-        price: "100",
+        price: "200",
     },
     {
         id: 2,
         slug: "pumps",
         title: "Pumps",
-        BrandName: "Bata",
-        description: "Elegant and stylish, Bata's pumps are perfect for both formal events and casual outings. Crafted with premium materials and a comfortable footbed, these shoes provide the perfect balance between fashion and function. Featuring a sleek design and cushioned insoles, they ensure you can stay on your feet all day without discomfort.",
+        BrandName: "Nike",
+        description: "Elegant and stylish, Nike's pumps are perfect for both formal events and casual outings. Crafted with premium materials and a comfortable footbed, these shoes provide the perfect balance between fashion and function. Featuring a sleek design and cushioned insoles, they ensure you can stay on your feet all day without discomfort.",
         image: IMAGES.CARD2_SHOW_IMAGE,
         isNewItem: false,
         price: "150",
@@ -25,31 +25,31 @@ export const CardData = [
         id: 3,
         slug: "snow-boots",
         title: "Snow Boots",
-        BrandName: "Services",
+        BrandName: "Bata",
         description: "Stay warm and dry even in the harshest winter conditions with Services' high-quality snow boots. Featuring a waterproof exterior, fur-lined interior, and slip-resistant soles, these boots provide maximum protection against snow and ice. Whether you're walking through icy streets or hiking in snowy mountains, these boots will keep your feet cozy and safe.",
         image: IMAGES.CARD7_SHOW_IMAGE,
         isNewItem: true,
-        price: "90"
+        price: "180"
     },
     {
         id: 4,
         slug: "oxfords",
         title: "Oxfords",
-        BrandName: "Bata",
-        description: "Classic and timeless, Bata's Oxford shoes are a must-have for any wardrobe. Designed with genuine leather, these shoes offer a refined look that pairs perfectly with formal wear. The cushioned insoles and flexible sole ensure all-day comfort, making them a great choice for work, weddings, or special occasions.",
+        BrandName: "Services",
+        description: "Classic and timeless, Services' Oxford shoes are a must-have for any wardrobe. Designed with genuine leather, these shoes offer a refined look that pairs perfectly with formal wear. The cushioned insoles and flexible sole ensure all-day comfort, making them a great choice for work, weddings, or special occasions.",
         image: IMAGES.CARD4_SHOW_IMAGE,
         isNewItem: false,
-        price: "90"
+        price: "120"
     },
     {
         id: 5,
-        slug: "sandals",
-        title: "Sandals",
-        BrandName: "Services",
-        description: "Enjoy the perfect blend of style and comfort with Services' sandals. Designed for both casual wear and beach outings, these sandals feature a lightweight construction, soft footbeds, and adjustable straps for a secure fit. The durable sole provides excellent traction, making them ideal for long walks and summer adventures.",
+        slug: "trex",
+        title: "Trex",
+        BrandName: "Nike",
+        description: "Enjoy the perfect blend of style and comfort with Nike's shoes. Designed for both casual wear and beach outings, these shoes feature a lightweight construction, soft footbeds, and adjustable straps for a secure fit. The durable sole provides excellent traction, making them ideal for long walks and summer adventures.",
         image: IMAGES.CARD6_SHOW_IMAGE,
         isNewItem: true,
-        price: "90"
+        price: "150"
     },
     {
         id: 6,
@@ -57,7 +57,7 @@ export const CardData = [
         title: "Hiking & Trekking Shoes",
         BrandName: "Bata",
         description: "Conquer any terrain with Bata's hiking and trekking shoes. Built for outdoor enthusiasts, these shoes provide superior grip, shock absorption, and waterproof protection. The reinforced toe caps and ankle support offer extra stability on rocky trails, ensuring a secure and comfortable journey on your next adventure.",
-        image: IMAGES.CARD4_SHOW_IMAGE,
+        image: IMAGES.CARD3_SHOW_IMAGE,
         isNewItem: true,
         price: "90",
     },
@@ -69,7 +69,7 @@ export const CardData = [
         description: "Step into summer with Bata's lightweight and breathable espadrilles. Designed for effortless style, these shoes feature a woven jute sole and soft canvas upper for a relaxed yet fashionable look. Perfect for beach days, casual strolls, or lounging in style, these espadrilles are a must-have for warm weather.",
         image: IMAGES.CARD5_SHOW_IMAGE,
         isNewItem: true,
-        price: "90",
+        price: "140",
     },
     {
         id: 8,
@@ -79,6 +79,6 @@ export const CardData = [
         description: "Stay cool and comfortable with Services' flip-flops. Designed for everyday wear, these lightweight flip-flops feature cushioned footbeds and flexible soles for ultimate ease. Whether you're hitting the beach, lounging by the pool, or just relaxing at home, these flip-flops provide all-day comfort and durability.",
         image: IMAGES.CARD1_SHOW_IMAGE,
         isNewItem: true,
-        price: "90",
+        price: "156",
     },
 ];

@@ -14,7 +14,7 @@ interface MainCardsSectionProps {
 const MainCardsSection: React.FC<MainCardsSectionProps> = ({ isNewItemCreate }) => {
     return (
         <div className="bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg pb-6">
-            <HeadingLarge padding="py-8" fontSize="text-4xl" margin='my-4'>This is card section</HeadingLarge>
+            <HeadingLarge padding="py-8" fontSize="text-4xl" margin='mb-4'>This is card section</HeadingLarge>
             <div className="flex flex-wrap gap-4 justify-center item-center w-full">
                 {
                     isNewItemCreate && isNewItemCreate.map((item: cardDataProps) => (
@@ -37,7 +37,7 @@ const MainCardsSection: React.FC<MainCardsSectionProps> = ({ isNewItemCreate }) 
                                     <button className="rounded-full pl-4 pr-1 py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
                                         <span>Buy now </span>
                                         <span className="bg-zinc-700 rounded-full text-[0.6rem] px-2 py-0 text-white">
-                                            {item.price}
+                                            ${item.price}
                                         </span>
                                     </button>
                                     <Link href={`${ROUTES.SHOEDETAILPAGE}/${item.slug}`}>
