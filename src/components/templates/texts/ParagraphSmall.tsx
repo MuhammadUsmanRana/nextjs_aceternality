@@ -1,16 +1,39 @@
 import React from "react";
-import {ParaghraphSmallProps} from "@/types/types"
+import { ParaghraphSmallProps } from "@/types/types"
 
 const ParagraphSmall: React.FC<ParaghraphSmallProps> = ({
-    textSize,
     children,
-    textColor
+    padding,
+    margin,
+    fontSize,
+    lineHeight,
+    fontFamily,
+    textAlign,
+    fontSizeMd,
+    fontSizeLg,
+    className,
+    style,
+    color
 }) => {
     return (
         <p
             className={
-                (textSize == "regular" ? "text-lg" : "") + (textColor ? textColor : "") + " "
-            }
+                `
+                text-black
+                ${fontSize ? fontSize : "text-sm"}
+                ${padding ? padding : "p-2"}
+                ${color ? color : "text-white"}
+                ${margin ? margin : "m-auto"}
+                ${lineHeight ? lineHeight : ""}
+                ${fontFamily ? fontFamily : ""}
+                ${textAlign ? textAlign : "text-center"}
+                ${fontSizeMd ? `md:${fontSizeMd}` : "md:text-lg"}
+                ${fontSizeLg ? `lg:${fontSizeLg}` : "lg:text-xl"}
+                font-semibold
+                leading-snug
+                ${className ? className : ""}
+            `}
+            style={style}
         >
             {children}
         </p>

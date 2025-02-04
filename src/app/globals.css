@@ -46,3 +46,32 @@ body {
   box-shadow: 0px 0px 7px 7px rgba(255, 255, 255, 0.85);
   border-radius: 50%;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgba(128, 128, 128, 0.308);
+  min-width: 300px;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.85);
+  };
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  object-fit: cover;
+}

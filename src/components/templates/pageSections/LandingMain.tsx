@@ -28,29 +28,27 @@ export default function LandingMain() {
                     className="relative flex flex-col gap-4 items-center justify-center px-4"
                 >
                     <div className="text-3xl md:text-6xl font-bold dark:text-white text-center">
-                    I am a {" "}
-                    <Typewriter
-                        words={['type writer!', 'infinity loop!', 'type speed 70!']}
-                        loop={Infinity}
-                        cursor
-                        cursorStyle='_'
-                        typeSpeed={70}
-                        deleteSpeed={50}
-                        delaySpeed={1000}
-                    />
-                     <br /> and my lights are cool you know.
+                        I am a {" "}
+                        <Typewriter
+                            words={['type writer!', 'infinity loop!', 'type speed 70!']}
+                            loop={Infinity}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                        <br /> and my lights are cool you know.
                     </div>
-                    <HeadingMedium>
-                    And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, soluta. for new reporsity
-                    And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, Eius, soluta. for new reporsity
-                    And this, is chemical burn. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, soluta. for new reporsity
+                    <HeadingMedium color="text-gray-300">
+                        Stay cool and comfortable with Services&apos; flip-flops. Designed for everyday wear, these lightweight flip-flops feature cushioned footbeds and flexible soles for ultimate ease. Whether you&apos;re hitting the beach, lounging by the pool, or just relaxing at home, these flip-flops provide all-day comfort and durability.
                     </HeadingMedium>
                     <Button>
                         Get started
                     </Button>
                 </motion.div>
             </AuroraBackground>
-            <MainCardsSection 
+            <MainCardsSection
                 isNewItemCreate={isNewItemCreate}
             />
         </>

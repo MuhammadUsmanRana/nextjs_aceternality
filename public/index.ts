@@ -8,4 +8,8 @@ export const IMAGES = {
     CARD6_SHOW_IMAGE : "/images/shoes6.png",
     CARD7_SHOW_IMAGE : "/images/shoes7.png",
     CARD8_SHOW_IMAGE : "/images/shoes8.png",
+    DETAIL_SHOW_IMAGE : "/images/detail-Image.webp",
+    // ADD_TO_CART_IMAGE: "/images/cart-iocn.svg",
+    ADD_TO_CART_IMAGE: "/images/addtocarticon.png",
+   
 }

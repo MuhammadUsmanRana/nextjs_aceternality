@@ -46,7 +46,16 @@ export type ParaghraphLargeProps = {
 }
 
 export type ParaghraphSmallProps = {
-    children: string;
-    textSize?: string;
-    textColor?: string;
+    children: React.ReactNode;
+    padding?: string;
+    margin?: string;
+    fontSize?: string;
+    lineHeight?: string;
+    fontFamily?: string;
+    textAlign?: string;
+    fontSizeMd?: string;
+    fontSizeLg?: string;
+    className?: string;
+    style?: React.CSSProperties;
+    color?: string;
 }

@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="body-font">
-      <div className="">
+      <div className="py-4">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-neutral-600 text-sm text-center sm:text-left">
             © 2020 Tailblocks —
