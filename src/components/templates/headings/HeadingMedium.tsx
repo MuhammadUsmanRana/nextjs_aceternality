@@ -31,7 +31,6 @@ const HeadingMedium: React.FC<HeaderMediumProps> = ({
         capitalize
         font-semibold
         leading-snug
-        my-3
         ${className ? className : ""}
       `}
             style={style}

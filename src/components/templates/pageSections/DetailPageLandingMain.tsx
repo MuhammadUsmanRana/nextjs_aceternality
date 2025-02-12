@@ -6,17 +6,10 @@ import { CardData } from '@/data/CardData';
 import ParagraphSmall from '../texts/ParagraphSmall';
 import HeadingLarge from '../headings/HeadingLarge';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/pagination';
 import ImageMagnifier from './ImageMagnifier';
 import Link from 'next/link';
-import HeadingMedium from '../headings/HeadingMedium';
-import { cardDataProps } from '@/types/types';
 import { ROUTES } from '@/lib/ROUTES';
+import SliderList from './SliderList';
 
 
 const DetailPageLandingMain = ({ slug }: { slug: string }) => {
@@ -25,11 +18,11 @@ const DetailPageLandingMain = ({ slug }: { slug: string }) => {
     return (
         <>
             <section className="body-font overflow-hidden flex flex-col items-center justify-center">
-                <div className="container px-5 py-24 mx-auto">
-                    <div className="lg:w-4/5 mx-auto flex flex-wrap">
+                <div className="container mx-auto">
+                    <div className="lg:w-4/5 mx-auto flex flex-wrap  h-dvh justify-center align-center items-center">
                         <ImageMagnifier
                             alt={item?.slug || 'detail-image'}
-                            className="lg:w-1/2 w-full lg:h-auto aspect-3/2 object-cover rounded"
+                            className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                             imgUrl={item?.image || IMAGES.DETAIL_SHOW_IMAGE}
                         />
                         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -145,47 +138,8 @@ const DetailPageLandingMain = ({ slug }: { slug: string }) => {
                     </div>
                 </div>
             </section>
-            <HeadingLarge margin="mb-6" textAlign="text-left" padding='px-8'>More like this</HeadingLarge>
-            <Swiper
-                slidesPerView={4}
-                spaceBetween={20}
-                freeMode={true}
-                pagination={{
-                    clickable: true,
-                }}
-                modules={[FreeMode]}
-                className="mySwiper"
-            >
-                {
-                    sliderItem.map((item: cardDataProps) => (
-                        <SwiperSlide key={item.id}>
-                            <Link href={`${ROUTES.SHOEDETAILPAGE}/${item?.slug}`}>
-                                <Image
-                                    width={300}
-                                    height={300}
-                                    alt="ecommerce"
-                                    className="object-cover object-center rounded"
-                                    src={item?.image || IMAGES.DETAIL_SHOW_IMAGE}
-                                />
-                            </Link>
-                            <HeadingMedium fontSize="text-sm">{item?.title}</HeadingMedium>
-                            <ParagraphSmall
-                                className="hidden-hover"
-                                style={{
-                                    height: "50px",
-                                    position: "absolute",
-                                    overflow: "hidden",
-                                    textOverflow: "ellipsis",
-                                    whiteSpace: "nowrap",
-                                    width: "100%"
-                                }}
-                            >
-                                {item?.description}
-                            </ParagraphSmall>
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
+            <SliderList sliderItem={sliderItem} />
+
         </>
 
     )

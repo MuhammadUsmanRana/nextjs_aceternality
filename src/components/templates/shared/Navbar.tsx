@@ -22,30 +22,30 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <Link href={ROUTES.HOME}><MenuItem setActive={setActive} active={active} item="Home" /></Link>
-        <MenuItem setActive={setActive} active={active} item="Features">
+        <MenuItem setActive={setActive} active={active} item="Products">
           <div className="text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
               title="Bata Shoes"
               href={ROUTES.BATA}
-              src={IMAGES.CARD1_SHOW_IMAGE}
+              src={IMAGES.CARD8_SHOW_IMAGE}
               description="Prepare for tech interviews like never before."
             />
             <ProductItem
               title="Services Shoes"
               href={ROUTES.SERVICES}
-              src={IMAGES.CARD2_SHOW_IMAGE}
+              src={IMAGES.CARD5_SHOW_IMAGE}
               description="Production ready Tailwind css components for your next project"
             />
             <ProductItem
               title="Nike Shoes"
               href={ROUTES.NIKE}
-              src={IMAGES.CARD3_SHOW_IMAGE}
+              src={IMAGES.CARD6_SHOW_IMAGE}
               description="Never write from scratch again. Go from idea to blog in minutes."
             />
             <ProductItem
               title="Ladies Shoes"
               href={ROUTES.LADIES}
-              src={IMAGES.CARD4_SHOW_IMAGE}
+              src={IMAGES.CARD_SHOW_GIRLS_IMAGE}
               description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
             />
           </div>

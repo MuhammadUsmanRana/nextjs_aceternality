@@ -18,14 +18,14 @@ const MainCardsSection: React.FC<MainCardsSectionProps> = ({ isNewItemCreate }) 
             <div className="flex flex-wrap gap-4 justify-center item-center w-full">
                 {
                     isNewItemCreate && isNewItemCreate.map((item: cardDataProps) => (
-                        <div className="flex justify-center" key={item.id}>
+                        <div className="flex justify-between" key={item.id}>
                             <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-8 bg-white dark:bg-zinc-900 h-full">
                                 <Image
                                     src={item.image}
                                     alt={item.title}
                                     width={400}
-                                    height={200}
-                                    className="object-cover w-full h-auto max-w-[400px] max-h-[250px]"
+                                    height={300}
+                                    className="object-contain"
                                 />
                                 <p className="text-base sm:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
                                     {item.title}

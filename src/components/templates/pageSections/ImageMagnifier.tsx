@@ -1,73 +1,62 @@
-/*************  ✨ Codeium Command ⭐  *************/
 import React, { useState } from "react";
 import Image from "next/image";
 
 type ImageMagnifierProps = {
-    imgUrl: string;
-    alt: string;
-    className?: string;
+  imgUrl: string;
+  alt: string;
+  className?: string;
 };
 
-const ImageMagnifier = ({
-    imgUrl,
-    alt,
-    className,
-}: ImageMagnifierProps): JSX.Element => {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
-    const [showMagnifier, setShowMagnifier] = useState(false);
-    const [cursorPosition, setcursorPosition] = useState({ x: 0, y: 0 });
+const ImageMagnifier = ({ imgUrl, alt, className }: ImageMagnifierProps) => {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [showMagnifier, setShowMagnifier] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-    // function to handle mouse hover over image 
-    const handleMouseHover = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        const { left, top, width, height } = (e.target as HTMLDivElement).getBoundingClientRect();
-        const x = ((e.pageX - left) / width) * 100;
-        const y = ((e.pageY - top) / height) * 100;
-        setPosition({ x, y });
-        setcursorPosition({ x: e.pageX, y: e.pageY });
-    };
+  const handleMouseHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
 
-    return (
+    setPosition({ x, y });
+    setCursorPosition({
+      x: e.clientX - left,
+      y: e.clientY - top,
+    });
+  };
+
+  return (
+    <div
+      className={`${className} relative w-full max-w-md mx-auto`}
+      onMouseEnter={() => setShowMagnifier(true)}
+      onMouseLeave={() => setShowMagnifier(false)}
+      onMouseMove={handleMouseHover}
+    >
+      <Image
+        width={500}
+        height={500}
+        src={imgUrl}
+        alt={alt}
+        className="cursor-pointer w-full h-auto object-contain"
+      />
+      {showMagnifier && (
         <div
-            className={`${className} relative`}
-            onMouseEnter={() => setShowMagnifier(true)}
-            onMouseLeave={() => setShowMagnifier(false)}
-            onMouseMove={handleMouseHover}
+          className="absolute pointer-events-none"
+          style={{
+            left: `${cursorPosition.x - 0}px`,
+            top: `${cursorPosition.y - 50}px`,
+          }}
         >
-            <Image
-                width={400}
-                height={400}
-                src={imgUrl}
-                alt={alt}
-                className="cursor-pointer"
-                layout="responsive"
-                objectFit="cover"
-            />
-            {
-                showMagnifier && (
-                    <div className="absolute"
-                        style={{
-                            left: `${cursorPosition.x - 200}px`,
-                            top: `${cursorPosition.y - 100}px`,
-                            pointerEvents: 'none'
-                        }}
-                    >
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "
-                            style={{
-                                backgroundImage: `url(${imgUrl})`,
-                                backgroundPosition: `${position.x}% ${position.y}%`,
-                                width: '200px',
-                                height: '200px',
-                                borderRadius: '50%',
-                                border: '4px solid #fff'
-                            }}
-                        >
-                        </div>
-                    </div>
-                )
-            }
+          <div
+            className="absolute w-40 h-40 border-4 border-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
+            style={{
+              backgroundImage: `url(${imgUrl})`,
+              backgroundPosition: `${position.x}% ${position.y}%`,
+            }}
+          ></div>
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default ImageMagnifier;
-/******  e1b213ee-2f77-4c48-8748-5c05e5255e2e  *******/ 

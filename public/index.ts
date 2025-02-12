@@ -11,5 +11,6 @@ export const IMAGES = {
     DETAIL_SHOW_IMAGE : "/images/detail-Image.webp",
     // ADD_TO_CART_IMAGE: "/images/cart-iocn.svg",
     ADD_TO_CART_IMAGE: "/images/addtocarticon.png",
-   
+    CARD_SHOW_GIRLS_IMAGE: "/images/ladies-shoes.png",
+    FIRST_IMAGE : "/images/first-image.avif",
 }
