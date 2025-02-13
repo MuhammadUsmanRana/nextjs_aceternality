@@ -12,7 +12,8 @@ const initialState: { cartItems: cardDataProps[] } = {
             image: 'image',
             isNewItem: true,
             price: 'price',
-            size: ['size']
+            size: ['size'],
+            inStock: 1,
         }
     ],
 };
