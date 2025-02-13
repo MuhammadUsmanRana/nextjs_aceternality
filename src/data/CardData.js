@@ -11,6 +11,7 @@ export const CardData = [
         isNewItem: true,
         price: "200",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 4,
     },
     {
         id: 2,
@@ -22,6 +23,7 @@ export const CardData = [
         isNewItem: true,
         price: "150",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 5,
     },
     {
         id: 3,
@@ -33,6 +35,7 @@ export const CardData = [
         isNewItem: true,
         price: "180",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 2,
     },
     {
         id: 4,
@@ -44,6 +47,7 @@ export const CardData = [
         isNewItem: true,
         price: "120",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 2,
     },
     {
         id: 5,
@@ -55,6 +59,7 @@ export const CardData = [
         isNewItem: true,
         price: "150",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 4,
     },
     {
         id: 6,
@@ -66,6 +71,7 @@ export const CardData = [
         isNewItem: true,
         price: "90",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 3,
     },
     {
         id: 7,
@@ -77,6 +83,7 @@ export const CardData = [
         isNewItem: true,
         price: "140",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 4,
     },
     {
         id: 8,
@@ -88,5 +95,6 @@ export const CardData = [
         isNewItem: true,
         price: "156",
         size: ["small", "medium", "large", "x-large", "xx-large"],
+        inStock: 2,
     },
 ];

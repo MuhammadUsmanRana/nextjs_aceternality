@@ -18,12 +18,20 @@ const DetailPageLandingMain = ({ slug }: { slug: string }) => {
     const [value, setValue] = React.useState(1);
     const item = CardData.find((item: { slug: string; }) => item.slug === slug);
     const sliderItem = CardData.filter((cittentItem: { slug: string; }) => cittentItem.slug !== slug);
+    console.log("🚀 ~ DetailPageLandingMain ~ item:", item)
+
+    // here set data not increment in stock length
+    // const inStockItem = CardData.find((item: { inStock: number; }) => item.inStock > 0);
+    // console.log("🚀 ~ DetailPageLandingMain ~ inStockItem:", inStockItem);
 
     const HandleIncrement = () => {
+        if (item && value >= item.inStock) {
+            return item?.inStock;
+        }
         setValue(value + 1);
     }
     const HandleDecrement = () => {
-        if (value <= 0) {
+        if (item && value <= 0) {
             return 1;
         }
         setValue(value - 1);
@@ -39,7 +47,6 @@ const DetailPageLandingMain = ({ slug }: { slug: string }) => {
         size
     }: cardDataProps) {
         console.log("items", id, slug, title, description, image, isNewItem, price, size);
-
     }
 
     return (
