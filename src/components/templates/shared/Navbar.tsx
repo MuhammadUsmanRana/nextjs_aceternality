@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { ROUTES } from "@/lib/ROUTES";
 import Link from "next/link";
 import { IMAGES } from "../../../../public";
-
+import { MdOutlineShoppingCart } from "react-icons/md";
 export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
@@ -21,7 +21,9 @@ function Navbar({ className }: { className?: string }) {
       className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
       <Menu setActive={setActive}>
-        <Link href={ROUTES.HOME}><MenuItem setActive={setActive} active={active} item="Home" /></Link>
+        <Link href={ROUTES.HOME}>
+          <MenuItem setActive={setActive} active={active} item="Home" />
+        </Link>
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className="text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
@@ -53,11 +55,20 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Pricing">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href={ROUTES.ADDTOCART}>Cart</HoveredLink>
-            {/* <HoveredLink href={ROUTES.}>Individual</HoveredLink>
-            <HoveredLink href={ROUTES.TEAM}>Team</HoveredLink>
-            <HoveredLink href={ROUTES.ENTERPRISE}>Enterprise</HoveredLink> */}
           </div>
         </MenuItem>
+        {/* here add cart icon and selected cart length */}
+        <div className="flex relative">
+          {/* <Image
+            src={IMAGES.ADD_TO_CART_IMAGE}
+            alt="Cart"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          /> */}
+          <MdOutlineShoppingCart />
+          <span className="text-white">0</span>
+        </div>
       </Menu>
     </div>
   );

@@ -10,6 +10,7 @@ export const CardData = [
         image: IMAGES.CARD1_SHOW_IMAGE,
         isNewItem: true,
         price: "200",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ export const CardData = [
         image: IMAGES.CARD2_SHOW_IMAGE,
         isNewItem: true,
         price: "150",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 3,
@@ -29,7 +31,8 @@ export const CardData = [
         description: "Stay warm and dry even in the harshest winter conditions with Bata's high-quality snow boots. Featuring a waterproof exterior, fur-lined interior, and slip-resistant soles, these boots provide maximum protection against snow and ice. Whether you're walking through icy streets or hiking in snowy mountains, these boots will keep your feet cozy and safe.",
         image: IMAGES.CARD3_SHOW_IMAGE,
         isNewItem: true,
-        price: "180"
+        price: "180",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 4,
@@ -39,7 +42,8 @@ export const CardData = [
         description: "Classic and timeless, Services' Oxford shoes are a must-have for any wardrobe. Designed with genuine leather, these shoes offer a refined look that pairs perfectly with formal wear. The cushioned insoles and flexible sole ensure all-day comfort, making them a great choice for work, weddings, or special occasions.",
         image: IMAGES.CARD4_SHOW_IMAGE,
         isNewItem: true,
-        price: "120"
+        price: "120",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 5,
@@ -49,7 +53,8 @@ export const CardData = [
         description: "Enjoy the perfect blend of style and comfort with Nike's shoes. Designed for both casual wear and beach outings, these shoes feature a lightweight construction, soft footbeds, and adjustable straps for a secure fit. The durable sole provides excellent traction, making them ideal for long walks and summer adventures.",
         image: IMAGES.CARD5_SHOW_IMAGE,
         isNewItem: true,
-        price: "150"
+        price: "150",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 6,
@@ -60,6 +65,7 @@ export const CardData = [
         image: IMAGES.CARD6_SHOW_IMAGE,
         isNewItem: true,
         price: "90",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 7,
@@ -70,6 +76,7 @@ export const CardData = [
         image: IMAGES.CARD7_SHOW_IMAGE,
         isNewItem: true,
         price: "140",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
     {
         id: 8,
@@ -80,5 +87,6 @@ export const CardData = [
         image: IMAGES.CARD8_SHOW_IMAGE,
         isNewItem: true,
         price: "156",
+        size: ["small", "medium", "large", "x-large", "xx-large"],
     },
 ];

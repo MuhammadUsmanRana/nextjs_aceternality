@@ -8,6 +8,7 @@ export type cardDataProps = {
     image: string;
     isNewItem: boolean;
     price: string;
+    size: string[];
 }
 
 export type HeaderLargeProps = {

@@ -36,21 +36,22 @@ const ImageMagnifier = ({ imgUrl, alt, className }: ImageMagnifierProps) => {
         height={500}
         src={imgUrl}
         alt={alt}
-        className="cursor-pointer w-full h-auto object-contain"
+        className="w-full h-auto object-cover rounded"
       />
-      {showMagnifier && (
+      {showMagnifier && ( // Hide on small screens
         <div
           className="absolute pointer-events-none"
           style={{
-            left: `${cursorPosition.x - 0}px`,
-            top: `${cursorPosition.y - 50}px`,
+            left: `${cursorPosition.x}px`,
+            top: `${cursorPosition.y}px`,
           }}
         >
           <div
-            className="absolute w-40 h-40 border-4 border-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-40 h-40 md:w-40 md:h-40 border-4 border-white rounded-full transform -translate-x-1/2 -translate-y-1/2"
             style={{
               backgroundImage: `url(${imgUrl})`,
               backgroundPosition: `${position.x}% ${position.y}%`,
+              backgroundSize: "300%", // Adjust zoom level
             }}
           ></div>
         </div>

@@ -18,7 +18,11 @@ const SliderList = ({ sliderItem }: { sliderItem: cardDataProps[] }) => {
                 More like this
             </HeadingLarge>
             <Swiper
-                slidesPerView={3}
+                slidesPerView={1}
+                breakpoints={{
+                    640: { slidesPerView: 2, spaceBetween: 10 },
+                    1024: { slidesPerView: 3, spaceBetween: 20 },
+                }}
                 spaceBetween={20}
                 freeMode={true}
                 modules={[FreeMode]}
@@ -36,9 +40,8 @@ const SliderList = ({ sliderItem }: { sliderItem: cardDataProps[] }) => {
                             />
                             <HeadingMedium fontSize="text-sm" padding='p-4'>{item?.title}</HeadingMedium>
                             <Link href={`${ROUTES.SHOEDETAILPAGE}/${item?.slug}`}>
-
-                                <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-0 group-hover:opacity-50 text-white transition-all duration-500 px-16 py-10'>
-                                    <span className="">
+                                <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-0 group-hover:opacity-50 text-white transition-all duration-500 px-16 py-8'>
+                                    <span>
                                         {item?.description}
                                     </span>
                                 </div>
